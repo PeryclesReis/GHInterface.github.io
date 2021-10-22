@@ -4,6 +4,7 @@ import GithubContext from './GithubContext';
 
 const GithubProvider = ({ children }) => {
   const [githubState, setGithubState] = useState({
+    hasUser: false,
     loading: false,
     user: {
       login: '',
@@ -22,47 +23,110 @@ const GithubProvider = ({ children }) => {
   });
 
   const getUser = async (username) => {
+    setGithubState((prevState) => ({
+      ...prevState,
+      loading: !prevState.loading,
+    }));
+
     if (username) {
-      const { data: user } = await apiGithub.get(`users/${ username }`);
+      const { data: user } = await apiGithub.get(`users/${ username }`).finally(() => {
         setGithubState((prevState) => ({
           ...prevState,
+          loading: !prevState.loading,
+        }));
+      });
+      const {
+        avatar_url,
+        login,
+        name,
+        html_url,
+        blog,
+        company,
+        location,
+        followers,
+        following,
+        public_gists,
+        public_repos,
+      } = user;
+        setGithubState((prevState) => ({
+          ...prevState,
+          hasUser: true,
           user: {
-            login: user.login,
-            name: user.name,
-            html_url: user.html_url,
-            blog: user.blog,
-            company: user.company,
-            location: user.location,
-            followers: user.followers,
-            following: user.following,
-            public_gists: user.public_gists,
-            public_repos: user.public_repos,
+            avatar_url,
+            login,
+            name,
+            html_url,
+            blog,
+            company,
+            location,
+            followers,
+            following,
+            public_gists,
+            public_repos,
           },
         }));
         return;
     }
 
-    const { data: user } = await apiGithub.get(`users/Peryclesreis`);
+    const { data: user } = await apiGithub.get(`users/Peryclesreis`).finally(() => {
       setGithubState((prevState) => ({
         ...prevState,
+        loading: !prevState.loading,
+      }));
+    });
+    const {
+      avatar_url,
+      login,
+      name,
+      html_url,
+      blog,
+      company,
+      location,
+      followers,
+      following,
+      public_gists,
+      public_repos,
+    } = user;
+      setGithubState((prevState) => ({
+        ...prevState,
+        hasUser: true,
         user: {
-          login: user.login,
-          name: user.name,
-          html_url: user.html_url,
-          blog: user.blog,
-          company: user.company,
-          location: user.location,
-          followers: user.followers,
-          following: user.following,
-          public_gists: user.public_gists,
-          public_repos: user.public_repos,
+          avatar_url,
+          login,
+          name,
+          html_url,
+          blog,
+          company,
+          location,
+          followers,
+          following,
+          public_gists,
+          public_repos,
         },
       }));
+  }
+
+  const getUserRepos = async (username) => {
+    const { data } = await apiGithub.get(`users/${ username }/repos`);
+    setGithubState((prevState) => ({
+      ...prevState,
+      repositories: data,
+    }));
+  }
+
+  const getUserStarred = async (username) => {
+    const { data } = await apiGithub.get(`users/${ username }/starred`);
+    setGithubState((prevState) => ({
+      ...prevState,
+      starred: data,
+    }));
   }
 
   const contextValue = {
     githubState,
     getUser: useCallback((username) => getUser(username), []),
+    getUserRepos: useCallback((username) => getUserRepos(username), []),
+    getUserStarred: useCallback((username) => getUserStarred(username), []),
   }
 
   return (

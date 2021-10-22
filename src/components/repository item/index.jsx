@@ -1,18 +1,25 @@
 import React from 'react';
+import * as S from '../../styles/RepositoriesItem';
 
 const RepositoryItem = ({ name, linkToRepo, fullName }) => {
   return (
-    <div>
-      <h2>{ name }</h2>
-      <h4>full name:</h4>
-      <a
-        href={ linkToRepo }
-        target='_blank'
-        rel="noreferrer"
-      >
-        { fullName }
-      </a>
-    </div>
+    <a
+      href={ linkToRepo }
+      target='_blank'
+      rel="noreferrer"
+    >
+      <S.Wrapper>
+        <S.WrapperTitle>
+            { name }
+        </S.WrapperTitle>
+        <S.WrapperFullName>
+          Full name:
+          <span>
+            { fullName }
+          </span>
+        </S.WrapperFullName>
+      </ S.Wrapper>
+    </a>
   );
 }
 

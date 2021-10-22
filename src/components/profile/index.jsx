@@ -9,7 +9,7 @@ const Profile = () => {
   return (
     <S.Wrapper>
       <S.WrapperImage
-        src='https://avatars.githubusercontent.com/u/32338399?v=4'
+        src={ githubState.user.avatar_url }
         alt='Avatar of user'
       />
       <S.WrapperInfoUser>
@@ -23,6 +23,28 @@ const Profile = () => {
               rel='noreferrer'
             >
                 { githubState.user.login }
+            </a>
+          </S.WrapperUserName>
+          <S.WrapperUserName>
+            <h3>Location:</h3>
+            <span>
+                { githubState.user.location }
+            </span>
+          </S.WrapperUserName>
+          <S.WrapperUserName>
+            <h3>Company:</h3>
+            <span>
+                { githubState.user.company }
+            </span>
+          </S.WrapperUserName>
+          <S.WrapperUserName>
+            <h3>Blog:</h3>
+            <a
+              href={ githubState.user.blog }
+              target='_blank'
+              rel='noreferrer'
+            >
+                { githubState.user.blog }
             </a>
           </S.WrapperUserName>
         </div>
