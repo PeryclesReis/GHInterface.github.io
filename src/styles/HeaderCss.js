@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   margin: 10px 0;
-  width: 100%;
+  width: 1900px;
 
   input {
     border: 1px solid #9999;

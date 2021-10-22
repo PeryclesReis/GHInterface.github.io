@@ -37,8 +37,10 @@ html {
  */
 
 body {
-  margin: 0;
+  background-color: #f8f8f8;
+  background-image: url('https://lh3.googleusercontent.com/proxy/RgrAH2RNIiWJ5zMVMQc_tY-aLfvyE3NzDY69_xr400aZm3Wda-1iU0apcS8eoFE-rp_BdTgqw6LUa4ZXcZ4r0xFzUxfXImr-6Lk7ZZmBzomWJzt1ClwyweBZmDLaTlR88Ek');
   font-family: roboto,sans-serifa;
+  margin: 0;
 }
 
 /**
