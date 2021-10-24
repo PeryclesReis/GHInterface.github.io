@@ -16,11 +16,22 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperTitle = styled.h2`
+  align-items: baseline;
   color: #5b47ff;
+  display: flex;
   font-size: 18px;
   font-weight: bold;
+  justify-content: space-between;
   margin: 10px 0 5px 0;
   padding: 5px 0;
+
+  span {
+    border: 1px solid #bfbdbd;
+    border-radius: 10px;
+    color: gray;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
 `;
 
 export const WrapperFullName = styled.h4`

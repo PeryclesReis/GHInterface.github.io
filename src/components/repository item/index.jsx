@@ -1,7 +1,7 @@
 import React from 'react';
-import * as S from '../../styles/RepositoriesItem';
+import * as S from '../../styles/RepositoriesItemCss';
 
-const RepositoryItem = ({ name, linkToRepo, fullName }) => {
+const RepositoryItem = ({ name, linkToRepo, fullName, typeRepo }) => {
   return (
     <a
       href={ linkToRepo }
@@ -11,6 +11,9 @@ const RepositoryItem = ({ name, linkToRepo, fullName }) => {
       <S.Wrapper>
         <S.WrapperTitle>
             { name }
+            <span>
+              { typeRepo }
+            </span>
         </S.WrapperTitle>
         <S.WrapperFullName>
           Full name:

@@ -34,10 +34,11 @@ const Repositories = () => {
             <S.WrapperList>
               { githubState.repositories.map((item) => (
                 <RepositoryItem
-                  key={item.id}
-                  name={item.name}
-                  linkToRepo={item.html_url}
-                  fullName={item.full_name}
+                  key={ item.id }
+                  name={ item.name }
+                  linkToRepo={ item.html_url }
+                  fullName={ item.full_name }
+                  typeRepo={ item.visibility }
                 />
               )) }
             </S.WrapperList>
