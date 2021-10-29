@@ -41,3 +41,5 @@ Primeiramente faça o fork deste projeto, logo após abra-o em uma ide de sua pr
 <img width="80px" src="https://img.shields.io/badge/git-black?style=flat&logo=git&logoColor=#339933" />
 <img height="40px" src="https://img.shields.io/badge/javascript-black?style=flat&logo=javascript&logoColor=#339933" />
 
+## 👨‍⚖️ Autor:
+Made with 😄 by Perycles F.
