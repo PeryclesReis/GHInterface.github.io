@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/gh-interface-repos/static/js/main.b7fec9a4.chunk.js",
+    "main.js.map": "/gh-interface-repos/static/js/main.b7fec9a4.chunk.js.map",
+    "runtime-main.js": "/gh-interface-repos/static/js/runtime-main.792cbbda.js",
+    "runtime-main.js.map": "/gh-interface-repos/static/js/runtime-main.792cbbda.js.map",
+    "static/js/2.51961d54.chunk.js": "/gh-interface-repos/static/js/2.51961d54.chunk.js",
+    "static/js/2.51961d54.chunk.js.map": "/gh-interface-repos/static/js/2.51961d54.chunk.js.map",
+    "index.html": "/gh-interface-repos/index.html",
+    "static/js/2.51961d54.chunk.js.LICENSE.txt": "/gh-interface-repos/static/js/2.51961d54.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.792cbbda.js",
+    "static/js/2.51961d54.chunk.js",
+    "static/js/main.b7fec9a4.chunk.js"
+  ]
+}
