@@ -1,19 +1,23 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  align-items: flex-start;
+  align-items: center;
   display: flex;
+  margin: 20px 0;
+  padding: 10px;
 `;
 
 export const WrapperImage = styled.img`
+  border: 1px solid #787f86;
   border-radius: 50%;
   display: flex;
   margin: 0 10px;
-  width: 200px;
+  width: 300px;
 `;
 
 export const WrapperInfoUser = styled.div`
   align-items: flex-start;
+  color: #D0D0D0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,11 +25,6 @@ export const WrapperInfoUser = styled.div`
   margin-left: 8px;
   h1 {
     font-size: 32px;
-    font-weight: bold;
-  }
-
-  h3 {
-    font-size: 18px;
     font-weight: bold;
   }
 
@@ -49,12 +48,14 @@ export const WrapperUserName= styled.div`
   display: flex;
   margin-top: 10px;
   h3 {
-    margin-right: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 6px;
   }
 
   a {
     font-size: 16px;
-    color: #5b47ff;
+    color: #797979;
     font-weight: bold;
   }
 `;

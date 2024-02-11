@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+  margin: 15px 0;
+  padding-top: 25px;
   width: 1900px;
 
   input {

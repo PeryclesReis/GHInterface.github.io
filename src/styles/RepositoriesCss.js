@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 
 export const WrapperTabs = styled(Tabs)`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
   margin-top: 20px;
   widht: 100%;
@@ -16,12 +19,14 @@ export const WrapperTabList = styled(TabList)`
 WrapperTabList.tabsRole = "TabList";
 
 export const WrapperTab = styled(Tab)`
-  border-radius: 16px;
-  border: 1px solid #99999952;
+  border-radius: 8px;
+  border: 1px solid #515151;
+  color: #316dca;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 5px 5px;
   padding: 12px;
-  margin-left: 10px;
   user-select: none;
 
   &:focus {
@@ -36,7 +41,7 @@ export const WrapperTab = styled(Tab)`
 WrapperTab.tabsRole = "Tab";
 
 export const WrapperTabPainel = styled(TabPanel)`
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #3b4043;
   display: none;
   padding: 8px;
 
@@ -49,6 +54,6 @@ WrapperTabPainel.tabsRole = 'TabPanel';
 
 export const WrapperList = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 `;

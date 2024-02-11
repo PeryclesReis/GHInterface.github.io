@@ -37,6 +37,9 @@ const Repositories = () => {
                   key={item.id}
                   name={item.name}
                   linkToRepo={item.html_url}
+                  language={item.language}
+                  updatedAt={new Date(item.updated_at.split("T")[0]).toLocaleDateString()}
+                  visibility={item.visibility}
                   fullName={item.full_name}
                 />
               )) }
@@ -49,6 +52,9 @@ const Repositories = () => {
                   key={item.id}
                   name={item.name}
                   linkToRepo={item.html_url}
+                  language={item.language}
+                  updatedAt={new Date(item.updated_at.split("T")[0]).toLocaleDateString()}
+                  visibility={item.visibility}
                   fullName={item.full_name}
                 />
               )) }
