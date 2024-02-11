@@ -38,7 +38,7 @@ jobs:
         path: ./build
 
   deploy:
-    name: Deploy
+    name: gh-interface-repos
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
@@ -50,7 +50,7 @@ jobs:
         name: production-files
         path: ./build
 
-    - name: Deploy to gh-pages
+    - name: gh-interface-repos to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
