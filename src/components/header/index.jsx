@@ -18,7 +18,7 @@ const Header = () => {
 
   useEffect(() => {
     getUser();
-  }, []);
+  }, [getUser]);
 
   return (
     <S.Wrapper>
